@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b0f">
+  <title>Friindzy — Terms of Use</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f7f7;
+      --text: #111111;
+      --muted: #5f5f5f;
+      --subtle: #888888;
+      --line: #e7e7e7;
+      --red: #d90000;
+      --red-soft: #fff3f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100% - 32px, 820px);
+      margin: 0 auto;
+      padding: 42px 0 64px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 34px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 750;
+      letter-spacing: -.01em;
+    }
+
+    .brand-mark {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--text);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    header {
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(34px, 8vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      font-weight: 780;
+    }
+
+    .intro {
+      max-width: 680px;
+      margin: 17px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    main {
+      padding-top: 8px;
+    }
+
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child {
+      border-bottom: 0;
+    }
+
+    .section-number {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 11px;
+      color: var(--text);
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -.025em;
+      font-weight: 740;
+    }
+
+    h3 {
+      margin: 22px 0 7px;
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 13px;
+      color: #3f3f3f;
+      font-size: 15px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    strong {
+      color: var(--text);
+      font-weight: 750;
+    }
+
+    em {
+      color: #303030;
+    }
+
+    ul, ol {
+      margin: 12px 0 0;
+      padding-left: 21px;
+      color: #3f3f3f;
+      font-size: 15px;
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 3px;
+    }
+
+    .callout {
+      margin: 18px 0 0;
+      padding: 16px 17px;
+      border-left: 3px solid var(--red);
+      border-radius: 3px;
+      background: var(--red-soft);
+    }
+
+    .callout p {
+      color: #333;
+    }
+
+    .warning {
+      border-left-color: var(--red);
+      background: #fff5f5;
+    }
+
+    .toc {
+      margin: 22px 0 4px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .toc-title {
+      margin-bottom: 9px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .toc a {
+      display: block;
+      padding: 4px 0;
+      color: #555;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .toc a:hover,
+    .toc a:focus {
+      color: var(--red);
+    }
+
+    footer {
+      padding-top: 28px;
+      color: var(--subtle);
+      font-size: 12px;
+    }
+
+    footer strong {
+      color: #555;
+    }
+
+    @media (min-width: 700px) {
+      .page {
+        width: min(100% - 64px, 820px);
+        padding-top: 62px;
+      }
+
+      section {
+        padding: 36px 0;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p, ul, ol {
+        font-size: 15.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="brand">
+      <div class="brand-mark">F</div>
+      Friindzy
+    </div>
+
+    <header>
+      <p class="eyebrow">Legal</p>
+      <h1>Terms of Use</h1>
+      <p class="intro">
+        These Terms explain the rules and conditions that apply when you access
+        or use Friindzy and its AI-powered features.
+      </p>
+
+      <div class="meta">
+        <span class="pill">Effective: [DD Month YYYY]</span>
+        <span class="pill">Last updated: [DD Month YYYY]</span>
+      </div>
+
+      <div class="callout">
+        <p>
+          <strong>Please read these Terms carefully.</strong>
+          By creating an account, accessing, or using Friindzy, you agree to
+          these Terms and to comply with applicable laws and policies.
+        </p>
+      </div>
+
+      <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title">On this page</div>
+        <a href="#about">1. About Friindzy</a>
+        <a href="#eligibility">2. Eligibility</a>
+        <a href="#account">3. Accounts</a>
+        <a href="#ai">4. AI Services</a>
+        <a href="#byok">5. Bring Your Own Key (BYOK)</a>
+        <a href="#content">6. User Content & Files</a>
+        <a href="#output">7. AI-Generated Content</a>
+        <a href="#coding">8. Coding & Development</a>
+        <a href="#instructions">9. Custom Instructions</a>
+        <a href="#acceptable">10. Acceptable Use</a>
+        <a href="#third-party">11. Third-Party Services</a>
+        <a href="#availability">12. Service Availability</a>
+        <a href="#ip">13. Intellectual Property</a>
+        <a href="#termination">14. Suspension & Termination</a>
+        <a href="#disclaimer">15. Disclaimers</a>
+        <a href="#liability">16. Limitation of Liability</a>
+        <a href="#changes">17. Changes to These Terms</a>
+        <a href="#contact">18. Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="about">
+        <span class="section-number">01 — Overview</span>
+        <h2>About Friindzy</h2>
+        <p>
+          Friindzy is an AI-powered platform designed to help users chat with
+          supported AI models, work with code, explore ideas, generate content,
+          process files, and assist with software-development and other
+          productivity-related tasks.
+        </p>
+        <p>
+          Depending on the version and features available, Friindzy may provide
+          AI chat, image generation, file reading and writing, conversation
+          history, data-management tools, Custom Instructions, and
+          <strong>Bring Your Own Key (BYOK)</strong> functionality.
+        </p>
+        <p>
+          Features may be added, changed, limited, or discontinued over time.
+        </p>
+      </section>
+
+      <section id="eligibility">
+        <span class="section-number">02 — Eligibility</span>
+        <h2>Eligibility</h2>
+        <p>
+          You may use Friindzy only if you are legally permitted to agree to
+          these Terms under the laws applicable to you.
+        </p>
+        <p>
+          If you are below the age at which you can independently agree to
+          these Terms in your jurisdiction, you must use Friindzy with the
+          involvement and permission of a parent or legal guardian where
+          required by applicable law.
+        </p>
+      </section>
+
+      <section id="account">
+        <span class="section-number">03 — Account</span>
+        <h2>Accounts & Account Security</h2>
+        <p>
+          Some Friindzy features may require an account. You agree to provide
+          information that is reasonably accurate and current when creating
+          an account.
+        </p>
+        <p>
+          You are responsible for protecting your account credentials and for
+          activity performed through your account. Do not knowingly provide
+          another person with unauthorized access to your account.
+        </p>
+        <p>
+          If you believe your account has been compromised, you should take
+          reasonable steps to secure it and contact us where appropriate.
+        </p>
+      </section>
+
+      <section id="ai">
+        <span class="section-number">04 — AI</span>
+        <h2>AI Services & Third-Party Models</h2>
+        <p>
+          Friindzy may provide an interface for accessing AI models operated by
+          third-party providers. Friindzy does not necessarily own or control
+          the underlying models.
+        </p>
+        <p>
+          Third-party providers may have their own <strong>terms, privacy
+          policies, content rules, rate limits, quotas, pricing, and technical
+          requirements</strong>. Your use of a provider through Friindzy may
+          therefore be subject to those additional terms.
+        </p>
+        <p>
+          Models and providers may change their APIs, capabilities, limits,
+          availability, pricing, or policies without notice. Friindzy does not
+          guarantee continued support for any particular provider or model.
+        </p>
+      </section>
+
+      <section id="byok">
+        <span class="section-number">05 — BYOK</span>
+        <h2>Bring Your Own Key</h2>
+        <p>
+          Friindzy may allow you to connect your own API keys from supported
+          providers. BYOK is intended to let you use your own provider
+          accounts and applicable usage allowances through Friindzy.
+        </p>
+        <ul>
+          <li>You are responsible for obtaining and maintaining your API keys.</li>
+          <li>You are responsible for provider charges, quotas, and usage limits associated with your keys.</li>
+          <li>You must only use API keys that you are authorized to use.</li>
+          <li>You must comply with the applicable provider's terms and policies.</li>
+          <li>You must not use stolen, compromised, or unlawfully obtained credentials.</li>
+        </ul>
+
+        <div class="callout warning">
+          <p>
+            <strong>API keys are sensitive credentials.</strong>
+            Never intentionally publish your keys in public repositories,
+            screenshots, social media posts, websites, or other public places.
+          </p>
+        </div>
+
+        <p style="margin-top:16px;">
+          Where multiple keys or providers are supported, Friindzy may select
+          another configured key or provider when an available limit is reached,
+          subject to the application's implementation and provider
+          availability. This behavior is not guaranteed to prevent
+          interruptions.
+        </p>
+      </section>
+
+      <section id="content">
+        <span class="section-number">06 — Your Content</span>
+        <h2>User Content & Files</h2>
+        <p>
+          “Your Content” means prompts, messages, files, documents, images,
+          code, instructions, and other material that you submit to or create
+          through Friindzy.
+        </p>
+        <p>
+          You remain responsible for Your Content and represent that you have
+          the rights and permissions necessary to provide it to Friindzy and,
+          where applicable, to the AI providers or other services involved in
+          processing it.
+        </p>
+        <p>
+          Friindzy may support reading, creating, modifying, or otherwise
+          processing files. Large tasks or contexts may be structured into
+          files or other suitable formats to help an AI model process the
+          information efficiently.
+        </p>
+        <p>
+          File support may depend on file type, size, model capabilities,
+          provider limits, available context, and technical conditions.
+        </p>
+      </section>
+
+      <section id="output">
+        <span class="section-number">07 — AI Output</span>
+        <h2>AI-Generated Content</h2>
+        <p>
+          Friindzy may generate text, code, images, explanations, summaries,
+          documents, suggestions, and other content (“AI Output”).
+        </p>
+        <p>
+          <strong>AI Output can be inaccurate, incomplete, outdated, biased,
+          misleading, or unsuitable for your intended purpose.</strong>
+          You are responsible for reviewing and verifying important AI Output
+          before relying on, publishing, executing, or distributing it.
+        </p>
+        <p>
+          AI Output should not automatically be treated as verified facts,
+          professional advice, or guaranteed human-created work.
+        </p>
+      </section>
+
+      <section id="coding">
+        <span class="section-number">08 — Development</span>
+        <h2>Coding & Software Development</h2>
+        <p>
+          Friindzy may be used for programming, code generation, debugging,
+          documentation, explanations, and software-development workflows.
+        </p>
+        <p>
+          AI-generated code may contain bugs, security vulnerabilities,
+          incorrect assumptions, incompatible dependencies, licensing issues,
+          or other defects.
+        </p>
+        <p>
+          You are responsible for reviewing and testing code before using it in
+          a project, production environment, application, or other system.
+          Security-sensitive, financial, legal, medical, authentication,
+          encryption, and infrastructure-related code should receive
+          appropriate independent review.
+        </p>
+      </section>
+
+      <section id="instructions">
+        <span class="section-number">09 — Personalization</span>
+        <h2>Custom Instructions</h2>
+        <p>
+          Friindzy may allow you to configure Custom Instructions or similar
+          personalization settings that influence how AI responses are
+          generated.
+        </p>
+        <p>
+          Custom Instructions do not override applicable law, Friindzy
+          policies, third-party provider rules, safety systems, system-level
+          instructions, or technical limitations.
+        </p>
+      </section>
+
+      <section id="acceptable">
+        <span class="section-number">10 — Rules</span>
+        <h2>Acceptable Use</h2>
+        <p>
+          You agree to use Friindzy only for lawful and legitimate purposes.
+          You must not use the Service to:
+        </p>
+        <ol>
+          <li>Violate applicable laws or regulations.</li>
+          <li>Infringe another person's intellectual-property, privacy, or other legal rights.</li>
+          <li>Harass, threaten, exploit, or abuse other people.</li>
+          <li>Generate or distribute content involving the exploitation or abuse of children.</li>
+          <li>Create or distribute non-consensual sexual or intimate content involving real people.</li>
+          <li>Facilitate fraud, scams, impersonation, or deceptive activity.</li>
+          <li>Facilitate unauthorized access, credential theft, or malicious cyber activity.</li>
+          <li>Create or distribute malware or harmful software intended to compromise systems.</li>
+          <li>Bypass authentication, access controls, usage restrictions, or security protections without authorization.</li>
+          <li>Use stolen, compromised, or unauthorized API keys or accounts.</li>
+          <li>Interfere with, disrupt, exploit, or compromise Friindzy or its infrastructure.</li>
+          <li>Abuse third-party APIs or intentionally circumvent their limits.</li>
+          <li>Upload or process content that you do not have the legal right to use.</li>
+          <li>Use the Service in a manner that violates applicable platform or third-party policies.</li>
+        </ol>
+        <p style="margin-top:14px;">
+          We may restrict access when reasonably necessary to prevent abuse,
+          protect users, comply with law, or maintain the security and
+          integrity of the Service.
+        </p>
+      </section>
+
+      <section id="third-party">
+        <span class="section-number">11 — Integrations</span>
+        <h2>Third-Party Services</h2>
+        <p>
+          Friindzy may rely on third-party services such as AI providers,
+          cloud infrastructure, authentication services, storage systems,
+          analytics or crash-reporting services, and other technical providers.
+        </p>
+        <p>
+          Friindzy is not responsible for independent outages, policy changes,
+          pricing changes, rate limits, model changes, or actions of
+          third-party providers outside our reasonable control.
+        </p>
+      </section>
+
+      <section id="availability">
+        <span class="section-number">12 — Availability</span>
+        <h2>Service Availability</h2>
+        <p>
+          Friindzy may occasionally experience maintenance, bugs, network
+          failures, provider outages, API limitations, storage failures,
+          compatibility problems, or other interruptions.
+        </p>
+        <p>
+          We may temporarily suspend or modify parts of the Service when
+          reasonably necessary for maintenance, security, upgrades, or
+          operational reasons.
+        </p>
+        <p>
+          <strong>We do not guarantee uninterrupted or error-free availability
+          of the Service or any particular AI provider.</strong>
+        </p>
+      </section>
+
+      <section id="ip">
+        <span class="section-number">13 — Ownership</span>
+        <h2>Intellectual Property</h2>
+        <p>
+          Friindzy's software, interface, branding, logos, original
+          documentation, and other proprietary materials are owned by or
+          licensed to the respective rights holder and are protected by
+          applicable intellectual-property laws.
+        </p>
+        <p>
+          Except where permitted by law or expressly authorized, you may not
+          copy, redistribute, modify, reverse engineer, extract, or create an
+          unauthorized derivative version of Friindzy or its proprietary
+          components.
+        </p>
+        <p>
+          Your rights in Your Content remain subject to your ownership and any
+          applicable third-party rights. AI-generated content may have
+          limitations on copyright or other intellectual-property protection
+          under applicable law.
+        </p>
+      </section>
+
+      <section id="termination">
+        <span class="section-number">14 — Access</span>
+        <h2>Suspension & Termination</h2>
+        <p>
+          We may suspend or terminate access where reasonably necessary if you
+          materially violate these Terms, engage in prohibited activity,
+          create a security risk, misuse third-party services, or where
+          required by law.
+        </p>
+        <p>
+          Where appropriate and legally permitted, we may provide notice before
+          taking action.
+        </p>
+        <p>
+          Account and data deletion may be irreversible. You should retain any
+          information you need before requesting deletion where an export or
+          other retention option is available.
+        </p>
+      </section>
+
+      <section id="disclaimer">
+        <span class="section-number">15 — Disclaimer</span>
+        <h2>Disclaimers</h2>
+        <p>
+          To the maximum extent permitted by applicable law, Friindzy and its
+          services are provided on an <strong>“as is” and “as available”</strong>
+          basis.
+        </p>
+        <p>
+          We do not guarantee that AI responses will always be accurate, that
+          generated code will be secure or error-free, that files will always
+          be processed successfully, or that any particular model or provider
+          will remain available.
+        </p>
+        <p>
+          Friindzy is a general-purpose AI assistance platform and does not,
+          unless expressly stated otherwise, provide medical, legal, financial,
+          tax, security certification, or other regulated professional advice.
+        </p>
+        <p>
+          Nothing in these Terms excludes a consumer right or warranty that
+          cannot legally be excluded under applicable law.
+        </p>
+      </section>
+
+      <section id="liability">
+        <span class="section-number">16 — Liability</span>
+        <h2>Limitation of Liability</h2>
+        <p>
+          To the maximum extent permitted by applicable law, Friindzy and its
+          developers, operators, contributors, affiliates, and service
+          providers will not be liable for indirect, incidental, consequential,
+          special, exemplary, or punitive damages arising from or related to
+          your use of the Service.
+        </p>
+        <p>
+          This may include loss of data, profits, business opportunities,
+          service interruptions, reliance on AI Output, errors in generated
+          code, third-party service failures, or unauthorized use of credentials
+          resulting from your own actions or negligence.
+        </p>
+        <p>
+          Nothing in these Terms limits liability where such limitation is
+          prohibited by applicable law.
+        </p>
+      </section>
+
+      <section id="changes">
+        <span class="section-number">17 — Updates</span>
+        <h2>Changes to These Terms</h2>
+        <p>
+          We may update these Terms from time to time. The revised version will
+          state its effective date.
+        </p>
+        <p>
+          Where required by applicable law, we will provide appropriate notice
+          of material changes. Your continued use of Friindzy after an updated
+          version becomes effective constitutes acceptance of the revised
+          Terms to the extent legally permitted.
+        </p>
+      </section>
+
+      <section id="contact">
+        <span class="section-number">18 — Contact</span>
+        <h2>Contact Friindzy</h2>
+        <p>
+          For questions, concerns, or legal notices regarding these Terms,
+          contact us using the information below.
+        </p>
+
+        <div class="callout">
+          <p><strong>Friindzy</strong></p>
+          <p>Developer / Legal Entity: [Your Legal Name or Company Name]</p>
+          <p>Email: [Your Support / Legal Email]</p>
+          <p>Website: [Your Official Website]</p>
+          <p>Country: [Country]</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p>
+        <strong>Friindzy</strong> · Terms of Use
+      </p>
+      <p>
+        This page is intended to describe the terms applicable to use of the
+        Friindzy Service. Replace the bracketed placeholders with your actual
+        legal and contact information before publishing.
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>

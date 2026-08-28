@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Friindzy Security">
+  <title>Friindzy — Security</title>
+
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f7f7f7;
+      --text: #111111;
+      --muted: #5f5f5f;
+      --subtle: #888888;
+      --line: #e7e7e7;
+      --red: #d90000;
+      --red-soft: #fff3f3;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      background: var(--bg);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                   Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      width: min(100% - 32px, 820px);
+      margin: 0 auto;
+      padding: 42px 0 64px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 34px;
+      color: var(--text);
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    .brand-mark {
+      width: 29px;
+      height: 29px;
+      display: grid;
+      place-items: center;
+      border-radius: 7px;
+      background: var(--text);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    header {
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(34px, 8vw, 52px);
+      line-height: 1.06;
+      letter-spacing: -.045em;
+      font-weight: 780;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 17px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 20px;
+    }
+
+    .pill {
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    main { padding-top: 8px; }
+
+    section {
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    section:last-child { border-bottom: 0; }
+
+    .section-number {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--red);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0 0 11px;
+      color: var(--text);
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: -.025em;
+      font-weight: 740;
+    }
+
+    h3 {
+      margin: 22px 0 7px;
+      color: var(--text);
+      font-size: 16px;
+    }
+
+    p {
+      margin: 0 0 13px;
+      color: #3f3f3f;
+      font-size: 15px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    strong {
+      color: var(--text);
+      font-weight: 750;
+    }
+
+    ul, ol {
+      margin: 12px 0 0;
+      padding-left: 21px;
+      color: #3f3f3f;
+      font-size: 15px;
+    }
+
+    li {
+      margin: 7px 0;
+      padding-left: 3px;
+    }
+
+    .callout {
+      margin: 18px 0 0;
+      padding: 16px 17px;
+      border-left: 3px solid var(--red);
+      border-radius: 3px;
+      background: var(--red-soft);
+    }
+
+    .callout p { color: #333; }
+
+    .toc {
+      margin: 22px 0 4px;
+      padding: 17px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+    }
+
+    .toc-title {
+      margin-bottom: 9px;
+      color: var(--text);
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .toc a {
+      display: block;
+      padding: 4px 0;
+      color: #555;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    .toc a:hover,
+    .toc a:focus {
+      color: var(--red);
+    }
+
+    footer {
+      padding-top: 28px;
+      color: var(--subtle);
+      font-size: 12px;
+    }
+
+    footer strong { color: #555; }
+
+    @media (min-width: 700px) {
+      .page {
+        width: min(100% - 64px, 820px);
+        padding-top: 62px;
+      }
+
+      section { padding: 36px 0; }
+
+      h2 { font-size: 24px; }
+
+      p, ul, ol { font-size: 15.5px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="brand">
+      <div class="brand-mark">F</div>
+      Friindzy
+    </div>
+
+    <header>
+      <p class="eyebrow">Security</p>
+      <h1>Security</h1>
+
+      <p class="intro">
+        Friindzy is designed with security in mind. This page explains the
+        security principles and safeguards used to help protect accounts,
+        credentials, user content, and the Service.
+      </p>
+
+      <div class="meta">
+        <span class="pill">Effective: [DD Month YYYY]</span>
+        <span class="pill">Last updated: [DD Month YYYY]</span>
+      </div>
+
+      <div class="callout">
+        <p>
+          <strong>Security is a shared responsibility.</strong>
+          Friindzy works to protect the Service and information it processes,
+          while users are responsible for securing their accounts, devices,
+          passwords, and API credentials.
+        </p>
+      </div>
+
+      <nav class="toc" aria-label="Table of contents">
+        <div class="toc-title">On this page</div>
+        <a href="#principles">1. Security Principles</a>
+        <a href="#account">2. Account Security</a>
+        <a href="#api">3. API Key Security</a>
+        <a href="#data">4. Data Protection</a>
+        <a href="#transmission">5. Data in Transit</a>
+        <a href="#storage">6. Data Storage</a>
+        <a href="#access">7. Access Controls</a>
+        <a href="#files">8. Files & User Content</a>
+        <a href="#providers">9. Third-Party AI Providers</a>
+        <a href="#logging">10. Logging & Monitoring</a>
+        <a href="#updates">11. Updates & Vulnerability Management</a>
+        <a href="#incidents">12. Security Incidents</a>
+        <a href="#responsibility">13. Your Responsibilities</a>
+        <a href="#limitations">14. Security Limitations</a>
+        <a href="#report">15. Report a Security Issue</a>
+        <a href="#contact">16. Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <section id="principles">
+        <span class="section-number">01 — Principles</span>
+        <h2>Security Principles</h2>
+
+        <p>
+          Friindzy aims to apply reasonable security practices throughout the
+          design, development, deployment, and operation of the Service.
+        </p>
+
+        <p>Our security approach is based on principles such as:</p>
+
+        <ul>
+          <li>Minimizing unnecessary access to user information.</li>
+          <li>Protecting authentication credentials and sensitive configuration.</li>
+          <li>Using secure communication mechanisms where appropriate.</li>
+          <li>Limiting access to systems and information based on operational need.</li>
+          <li>Keeping software and dependencies reasonably maintained.</li>
+          <li>Monitoring for operational and security problems where appropriate.</li>
+          <li>Providing users with controls for managing their account and data.</li>
+        </ul>
+      </section>
+
+      <section id="account">
+        <span class="section-number">02 — Accounts</span>
+        <h2>Account Security</h2>
+
+        <p>
+          Account credentials are an important part of protecting access to
+          Friindzy.
+        </p>
+
+        <p>
+          Where authentication is provided, Friindzy may use authentication
+          mechanisms and access controls intended to prevent unauthorized
+          access.
+        </p>
+
+        <p>
+          You should use a strong, unique password where passwords are used,
+          avoid sharing authentication credentials, and secure the device from
+          which you access Friindzy.
+        </p>
+
+        <p>
+          If you believe that someone has obtained unauthorized access to your
+          account, take reasonable steps to secure the account and contact
+          Friindzy through the available support channel.
+        </p>
+      </section>
+
+      <section id="api">
+        <span class="section-number">03 — BYOK</span>
+        <h2>API Key Security</h2>
+
+        <p>
+          Friindzy may support Bring Your Own Key (“BYOK”), allowing users to
+          connect API credentials from supported AI providers.
+        </p>
+
+        <p>
+          API keys can provide access to third-party services and may be linked
+          to usage quotas or billing. They should therefore be treated as
+          <strong>sensitive authentication credentials</strong>.
+        </p>
+
+        <ul>
+          <li>Do not publish API keys in public repositories.</li>
+          <li>Do not share API keys through screenshots or public posts.</li>
+          <li>Do not use keys that belong to another person without authorization.</li>
+          <li>Revoke or rotate a key if you believe it has been exposed.</li>
+          <li>Review the security controls provided by the relevant AI provider.</li>
+        </ul>
+
+        <div class="callout">
+          <p>
+            <strong>Important implementation note:</strong>
+            Replace the statements in this section with the exact technical
+            behavior of Friindzy before publishing. For example, specify
+            whether API keys are stored only on-device, encrypted at rest,
+            transmitted to a server, or handled in another way.
+          </p>
+        </div>
+      </section>
+
+      <section id="data">
+        <span class="section-number">04 — Protection</span>
+        <h2>Data Protection</h2>
+
+        <p>
+          Friindzy uses reasonable measures intended to protect information
+          processed by the Service against unauthorized access, alteration,
+          disclosure, or destruction.
+        </p>
+
+        <p>
+          The protections used may vary depending on the type of information,
+          the feature involved, the device, the infrastructure, and the
+          third-party services required to provide that feature.
+        </p>
+
+        <p>
+          Sensitive information should not be submitted unless it is necessary
+          for the task and you understand how the relevant feature processes
+          that information.
+        </p>
+      </section>
+
+      <section id="transmission">
+        <span class="section-number">05 — Transmission</span>
+        <h2>Data in Transit</h2>
+
+        <p>
+          Where network communication is required, Friindzy may use secure
+          transport mechanisms such as HTTPS/TLS to protect information while
+          it travels between supported application components and services.
+        </p>
+
+        <p>
+          <strong>The exact transport protections should reflect the production
+          infrastructure.</strong> Do not describe a particular encryption
+          standard here unless it is actually used.
+        </p>
+      </section>
+
+      <section id="storage">
+        <span class="section-number">06 — Storage</span>
+        <h2>Data Storage</h2>
+
+        <p>
+          Information stored by Friindzy may include account data,
+          conversations, files, preferences, configuration, and technical
+          information, depending on the features you use.
+        </p>
+
+        <p>
+          Storage protections may include access controls, authentication,
+          encryption, restricted permissions, and other measures appropriate
+          to the underlying infrastructure.
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>Production configuration:</strong>
+            Add the actual storage and encryption details here once Friindzy's
+            final backend architecture is established. Security documentation
+            should describe what is actually deployed, not an intended future
+            implementation.
+          </p>
+        </div>
+      </section>
+
+      <section id="access">
+        <span class="section-number">07 — Access</span>
+        <h2>Access Controls</h2>
+
+        <p>
+          Access to systems and information should be limited according to
+          operational requirements and the principle of least privilege.
+        </p>
+
+        <p>
+          Administrative access may be protected using authentication and other
+          security controls appropriate to the environment.
+        </p>
+
+        <p>
+          We may review access, permissions, logs, or other operational
+          information when reasonably necessary to maintain security,
+          investigate incidents, or operate the Service.
+        </p>
+      </section>
+
+      <section id="files">
+        <span class="section-number">08 — Content</span>
+        <h2>Files & User Content</h2>
+
+        <p>
+          Friindzy may process files, images, documents, source code, prompts,
+          and other content submitted by users.
+        </p>
+
+        <p>
+          Access to stored content should be limited to the systems and
+          services necessary to provide the requested functionality, subject
+          to the actual architecture and applicable third-party processing.
+        </p>
+
+        <p>
+          Users should avoid uploading passwords, private keys, authentication
+          tokens, or other secrets unless they are genuinely required for the
+          task and the user understands the associated risks.
+        </p>
+      </section>
+
+      <section id="providers">
+        <span class="section-number">09 — Providers</span>
+        <h2>Third-Party AI Providers</h2>
+
+        <p>
+          Friindzy may use or connect to third-party AI providers. Security and
+          privacy controls provided by those companies are separate from
+          Friindzy's own controls.
+        </p>
+
+        <p>
+          When information is sent to a third-party provider to perform a
+          feature you requested, that provider may process the information
+          according to its own security practices, privacy policy, terms, and
+          technical architecture.
+        </p>
+
+        <p>
+          <strong>Provider-specific security claims should not be attributed to
+          Friindzy unless they have been verified.</strong>
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>Supported providers:</strong>
+            [List the AI/API providers actually supported by the production
+            version of Friindzy and provide their official security/privacy
+            documentation where appropriate.]
+          </p>
+        </div>
+      </section>
+
+      <section id="logging">
+        <span class="section-number">10 — Monitoring</span>
+        <h2>Logging & Monitoring</h2>
+
+        <p>
+          Friindzy may maintain technical or security logs to operate the
+          Service, diagnose failures, detect abuse, investigate security
+          incidents, and improve reliability.
+        </p>
+
+        <p>
+          Logs may contain technical information such as timestamps, request
+          information, application versions, error information, or security
+          events, depending on the production implementation.
+        </p>
+
+        <p>
+          Access to security-sensitive logs should be restricted according to
+          operational requirements.
+        </p>
+      </section>
+
+      <section id="updates">
+        <span class="section-number">11 — Maintenance</span>
+        <h2>Updates & Vulnerability Management</h2>
+
+        <p>
+          We may periodically update the Friindzy application, server
+          components, dependencies, security configurations, and related
+          infrastructure.
+        </p>
+
+        <p>
+          Updates may include security patches, dependency updates, bug fixes,
+          configuration changes, or improvements designed to reduce security
+          risks.
+        </p>
+
+        <p>
+          Users should keep Friindzy updated to the latest supported version
+          where updates are available.
+        </p>
+      </section>
+
+      <section id="incidents">
+        <span class="section-number">12 — Incidents</span>
+        <h2>Security Incidents</h2>
+
+        <p>
+          If we identify a security incident that affects information processed
+          by Friindzy, we may investigate the incident and take reasonable
+          steps to contain, remediate, and prevent recurrence.
+        </p>
+
+        <p>
+          Where notification is required by applicable law, we will provide
+          notice through an appropriate channel and within the timeframe
+          required by law.
+        </p>
+
+        <p>
+          Security incidents may involve investigation, temporary service
+          restrictions, credential rotation, system changes, or other
+          protective measures.
+        </p>
+      </section>
+
+      <section id="responsibility">
+        <span class="section-number">13 — Users</span>
+        <h2>Your Security Responsibilities</h2>
+
+        <p>
+          Security is not solely the responsibility of the Service. You also
+          play an important role in protecting your information.
+        </p>
+
+        <ul>
+          <li>Keep your account credentials private.</li>
+          <li>Protect your device with appropriate security controls.</li>
+          <li>Do not intentionally expose API keys or access credentials.</li>
+          <li>Use only API keys and accounts you are authorized to use.</li>
+          <li>Review third-party provider security and privacy documentation.</li>
+          <li>Keep the Friindzy application updated.</li>
+          <li>Report suspected security problems responsibly.</li>
+        </ul>
+      </section>
+
+      <section id="limitations">
+        <span class="section-number">14 — Limitations</span>
+        <h2>Security Limitations</h2>
+
+        <p>
+          No application, server, network, database, API, or electronic
+          transmission can be guaranteed to be completely secure.
+        </p>
+
+        <p>
+          Accordingly, Friindzy does not promise absolute or perfect security.
+          Security measures are intended to reduce risk, not eliminate every
+          possible threat.
+        </p>
+
+        <p>
+          Third-party providers, devices, operating systems, networks, and
+          services may introduce risks outside Friindzy's direct control.
+        </p>
+      </section>
+
+      <section id="report">
+        <span class="section-number">15 — Reporting</span>
+        <h2>Report a Security Issue</h2>
+
+        <p>
+          If you believe you have discovered a security vulnerability in
+          Friindzy, please report it responsibly rather than publicly
+          disclosing sensitive technical details.
+        </p>
+
+        <p>
+          When reporting a security issue, include enough information for us to
+          understand and reproduce the problem, while avoiding unnecessary
+          disclosure of personal information, credentials, API keys, or other
+          secrets.
+        </p>
+
+        <div class="callout">
+          <p>
+            <strong>Security contact:</strong>
+            [security@yourdomain.com]
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <span class="section-number">16 — Contact</span>
+        <h2>Contact Friindzy</h2>
+
+        <p>
+          For security questions, vulnerability reports, or other security
+          concerns, contact us using the information below.
+        </p>
+
+        <div class="callout">
+          <p><strong>Friindzy</strong></p>
+          <p>Developer / Legal Entity: [Your Legal Name or Company Name]</p>
+          <p>Security Email: [Security Email Address]</p>
+          <p>Support Email: [Support Email Address]</p>
+          <p>Website: [Your Official Website]</p>
+          <p>Country: [Country]</p>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <p><strong>Friindzy</strong> · Security</p>
+      <p>
+        This page should accurately describe the security controls deployed by
+        the production version of Friindzy. Replace bracketed placeholders and
+        remove unsupported claims before publishing.
+      </p>
+    </footer>
+
+  </div>
+</body>
+</html>
